@@ -32,7 +32,7 @@ module SimpleCov
       def merge_line_coverage(first_val, second_val)
         sum = first_val.to_i + second_val.to_i
 
-        if sum.zero? && (first_val.nil? || second_val.nil?)
+        if sum.zero? && (first_val.nil? && second_val.nil?)
           nil
         else
           sum
